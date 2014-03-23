@@ -1,13 +1,17 @@
-<h1>Listing todos</h1>
+
+
+<h1>Moja lista rzeczy do zrobienia</h1>
 
   <div id="content">
     <% @todos.each do |todo| %>
       <div class="item">
-        <p><%= todo.name %></p>
-        <p><%= todo.description %></p>
-        <span><%= link_to 'Show', todo %></span>
-        <span><%= link_to 'Edit', edit_todo_path(todo) %></span>
-        <span><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <div class="item-content">
+          <p class="item-title"><%= todo.name %></p>
+          <p class="item-desc"><%= todo.description %></p>
+          <span><%= link_to 'Show', todo %></span>
+          <span><%= link_to 'Edit', edit_todo_path(todo) %></span>
+          <span><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        </div>
       </div>
     <% end %>
   </div>
@@ -21,6 +25,7 @@
       var $container = $('#content');
       
       $container.isotope({
+        animationEngine : 'jquery',
         itemSelector: '.item'
       });
 

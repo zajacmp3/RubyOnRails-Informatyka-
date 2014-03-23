@@ -13,6 +13,8 @@ class PagesController < ApplicationController
   # GET /todos.json
   def index
     @todos = Todo.all
+    require 'github-markup'
+  #TODO: implement usage of markup
   end
 
   # GET /todos/1

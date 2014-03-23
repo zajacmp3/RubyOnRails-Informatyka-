@@ -32,6 +32,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'github-markup'
+gem 'redcarpet'
+gem 'RedCloth'
+gem 'rdoc', '~> 3.6.1'
+gem 'org-ruby'
+gem 'creole'
+gem 'wikicloth'
+gem 'asciidoctor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
