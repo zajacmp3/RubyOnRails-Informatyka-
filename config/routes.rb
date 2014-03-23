@@ -2,7 +2,7 @@ MyStaticPages::Application.routes.draw do
   resources :todos
 
   resources :pages
-
+  root 'pages#index'
 match "welcome", to: "pages#welcome", via: 'get'
 match "about",   to: "pages#about",   via: 'get'
 match "todo",   to: "pages#todo",   via: 'get'
