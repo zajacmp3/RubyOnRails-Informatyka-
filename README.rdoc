@@ -1,11 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Architektura serwisów internetowych. Zadanie 
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: ruby-2.1.1 [ x86_64 ]
 
 * System dependencies
 
