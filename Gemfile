@@ -40,6 +40,9 @@ gem 'org-ruby'
 gem 'creole'
 gem 'wikicloth'
 gem 'asciidoctor'
+
+gem "rmagick"
+gem "carrierwave"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
