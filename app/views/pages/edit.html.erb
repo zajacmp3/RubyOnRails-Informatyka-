@@ -1,6 +1,7 @@
 <h1>Editing todo</h1>
+<div class="center form">
+	<%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @todo %> |
-<%= link_to 'Back', todos_path %>
+	<span class="formbutton"><%= link_to 'Wyświetl', @todo %> |</span>
+	<span class="formbutton"><%= link_to 'Powrót', todos_path %></span>
+</div>

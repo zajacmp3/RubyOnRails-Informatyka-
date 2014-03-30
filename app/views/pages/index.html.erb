@@ -1,6 +1,7 @@
 
 
 <h1>Moja lista rzeczy do zrobienia</h1>
+<span class="formbutton"><%= link_to 'Dodaj nowe zadanie', new_page_path %></span>
 
   <div id="content">
     <% @todos.each do |todo| %>
@@ -8,28 +9,24 @@
         <div class="item-content">
           <p class="item-title"><%= todo.name %></p>
           <p class="item-desc"><%= todo.description %></p>
-          <span><%= link_to 'Show', todo %></span>
-          <span><%= link_to 'Edit', edit_todo_path(todo) %></span>
-          <span><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <span class="formbutton"><%= link_to 'Wyświetl', todo %></span>
+          <span class="formbutton"><%= link_to 'Edytuj', edit_todo_path(todo) %></span>
+          <span class="formbutton"><%= link_to 'Usuń', todo, method: :delete, data: { confirm: 'Jesteś pewien?' } %></span>
         </div>
       </div>
     <% end %>
   </div>
 <br>
-
-<%= link_to 'New Todo', new_todo_path %>
-
-  <script>
-    $(function(){
-      
-      var $container = $('#content');
-      
-      $container.isotope({
-        animationEngine : 'jquery',
-        itemSelector: '.item'
-      });
-
-      
+<script>
+  $(function(){
+    
+    var $container = $('#content');
+    
+    $container.isotope({
+      animationEngine : 'jquery',
+      itemSelector: '.item'
     });
 
-  </script>
+    
+  });
+</script>
