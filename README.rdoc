@@ -2,17 +2,19 @@
 
 Architektura serwisów internetowych. Zadanie my_static_pages
 
-Wykonane w projekcie:
+Link do działającej aplikacji na własnym skonfigurowanym serwerze www.rails.zajacmp3.pl
+
+==Wykonane w projekcie:
  * Użycie isotope do układania i karteczek w trakcie skalowania strony
  * Użycie carrierwave gem do wrzucania obrazków
  * Skonfigurowanie własnego serwera apache2 z użyciem passanger dla projektu rails
  * Nadanie estetycznej minimalistycznej szaty strony.
-Do zrobienia w ramach własnej nauki:
+==Do zrobienia w ramach własnej nauki:
  * Nie używanie subdomeny dla projektów rails
  * Dodanie UTF-8 dla bazy danych tak aby przyjęła polskie znaki (gem mysql2)
  * Dodanie systemy rejestracji logowania i możliwości indywidualizacji list 'todo'
 
-Testing on:
+==Testing on:
 
 * Ruby version: ruby-2.1.1 [ x86_64 ]
 
