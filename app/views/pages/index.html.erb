@@ -17,6 +17,7 @@
     <% end %>
   </div>
 <br>
+<%= will_paginate @todos %>
 <script>
   $(function(){
     
@@ -27,6 +28,21 @@
       itemSelector: '.item'
     });
 
-    
+    $container.infinitescroll({
+      navSelector  : ".pagination",            
+                     // selector for the paged navigation (it will be hidden)
+      nextSelector : ".next_page",    
+                     // selector for the NEXT link (to page 2)
+      itemSelector : ".item",
+        loading: {
+            finishedMsg: 'No more pages to load.',
+            img: 'http://i.imgur.com/qkKy8.gif'
+          }
+        },
+        // call Isotope as a callback
+        function( newElements ) {
+          $container.isotope( 'appended', $( newElements ) ); 
+        }
+      );
   });
 </script>

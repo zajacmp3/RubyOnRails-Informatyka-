@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.all
+    @todos = Todo.paginate(:page => params[:page], :per_page => 12)
     require 'github-markup'
   #TODO: implement usage of markup
   end
