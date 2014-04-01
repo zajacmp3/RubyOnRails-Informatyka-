@@ -1,29 +1,50 @@
-<h1>Listing todos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<h1>Moja lista rzeczy do zrobienia</h1>
+<span class="formbutton"><%= link_to 'Dodaj nowe zadanie', new_todo_path %></span>
+<span class="formbutton"><%= link_to 'O nas', controller: 'pages', action: 'about' %></span>
+<span class="formbutton"><%= link_to 'Welcome!', controller: 'pages', action: 'welcome' %></span>
+
+  <div id="content">
     <% @todos.each do |todo| %>
-      <tr>
-        <td><%= todo.name %></td>
-        <td><%= todo.description %></td>
-        <td><%= link_to 'Show', todo %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-        <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="item">
+        <div class="item-content">
+          <p class="item-title"><%= todo.name %></p>
+          <p class="item-desc"><%= todo.description %></p>
+          <span class="formbutton"><%= link_to 'Wyświetl', todo %></span>
+          <span class="formbutton"><%= link_to 'Edytuj', edit_todo_path(todo) %></span>
+          <span class="formbutton"><%= link_to 'Usuń', todo, method: :delete, data: { confirm: 'Jesteś pewien?' } %></span>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+  </div>
 <br>
+<%= will_paginate @todos %>
+<script>
+  $(function(){
+    
+    var $container = $('#content');
+    
+    $container.isotope({
+      animationEngine : 'jquery',
+      itemSelector: '.item'
+    });
 
-<%= link_to 'New Todo', new_todo_path %>
+    $container.infinitescroll({
+      navSelector  : ".pagination",            
+                     // selector for the paged navigation (it will be hidden)
+      nextSelector : ".next_page",    
+                     // selector for the NEXT link (to page 2)
+      itemSelector : ".item",
+        loading: {
+            finishedMsg: 'No more pages to load.',
+            img: 'http://i.imgur.com/qkKy8.gif'
+          }
+        },
+        // call Isotope as a callback
+        function( newElements ) {
+          $container.isotope( 'appended', $( newElements ) ); 
+        }
+      );
+  });
+</script>

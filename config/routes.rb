@@ -2,11 +2,9 @@ MyStaticPages::Application.routes.draw do
   resources :todos
 
   resources :pages
-  root 'pages#index'
+  root 'todos#index'
 match "welcome", to: "pages#welcome", via: 'get'
 match "about",   to: "pages#about",   via: 'get'
-match "todo",   to: "pages#todo",   via: 'get'
-match "addTodo",   to: "pages#addTodo",   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
