@@ -21,8 +21,7 @@
 <br>
 <%= will_paginate @todos %>
 <script>
-  $(function(){
-    
+$( document ).ready(function() {
     var $container = $('#content');
     
     $container.isotope({
@@ -46,5 +45,5 @@
           $container.isotope( 'appended', $( newElements ) ); 
         }
       );
-  });
+  }); 
 </script>
