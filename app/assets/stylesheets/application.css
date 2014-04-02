@@ -117,7 +117,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e0e0e0', e
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #ffa200;
-  padding: 10px 20px;
+  line-height: 45px;
+  padding: 10px;
   background: -moz-linear-gradient(
     top,
     #ffffff 0%,
@@ -143,5 +144,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e0e0e0', e
     inset 0px 0px 3px rgba(255,255,255,1);
   text-shadow:
     0px -1px 0px rgba(000,000,000,0.1),
-    0px 1px 0px rgba(255,255,255,1);
+    0px 
+}
+
+.search-engine {
+  display: inline-block;
+}
+
+.search-engine form {
+  display: inline-block;
 }

@@ -4,6 +4,7 @@
 <span class="formbutton"><%= link_to 'Dodaj nowe zadanie', new_todo_path %></span>
 <span class="formbutton"><%= link_to 'O nas', controller: 'pages', action: 'about' %></span>
 <span class="formbutton"><%= link_to 'Welcome!', controller: 'pages', action: 'welcome' %></span>
+<span class="search-engine"><%= render 'search' %></span>
 
   <div id="content">
     <% @todos.each do |todo| %>

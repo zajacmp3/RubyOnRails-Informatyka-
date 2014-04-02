@@ -3,6 +3,8 @@ MyStaticPages::Application.routes.draw do
 
   resources :pages
   root 'todos#index'
+  match "search", to: "todos#search", via: 'post'
+  match "search", to: "todos#index", via: 'get'
 match "welcome", to: "pages#welcome", via: 'get'
 match "about",   to: "pages#about",   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.

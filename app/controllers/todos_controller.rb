@@ -9,6 +9,16 @@ class TodosController < ApplicationController
   #TODO: implement usage of markup
   end
 
+  # POST /search/
+  def search
+    if params[:search].nil? || params[:search].empty? then
+      @todos = Todo.paginate(:page => params[:page], :per_page => 12)
+    else
+      @todos = Todo.paginate(:conditions => ["name LIKE ?", params[:search]], :page => params[:page], :per_page => 12)
+    end
+    render 'index'
+  end
+
   # GET /todos/1
   # GET /todos/1.json
   def show
@@ -26,7 +36,7 @@ class TodosController < ApplicationController
   # POST /todos
   # POST /todos.json
   def create
-    @todo = Todo.new(todo_params)
+    @todo = Todo.new()
 
     respond_to do |format|
       if @todo.save
