@@ -1,4 +1,4 @@
-== README
+== README Update 2/4/2014
 
 Architektura serwisów internetowych. Zadanie my_static_pages
 
@@ -11,6 +11,7 @@ Link do działającej aplikacji na własnym skonfigurowanym serwerze www.rails.z
  * Nadanie estetycznej minimalistycznej szaty strony.
  * Dodanie paginacji z użyciem gemu will_paginate
  * Dodanie infinite scroll
+ * Dodanie wyszukiwarki
 ==Do zrobienia w ramach własnej nauki:
  * Nie używanie subdomeny dla projektów rails
  * Dodanie UTF-8 dla bazy danych tak aby przyjęła polskie znaki (gem mysql2)
