@@ -154,3 +154,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e0e0e0', e
 .search-engine form {
   display: inline-block;
 }
+
+.show {
+  display: inline-block;
+  padding: 0 30px;
+  margin: 0 45%;
+}

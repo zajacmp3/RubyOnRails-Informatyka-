@@ -14,7 +14,6 @@ Link do działającej aplikacji na własnym skonfigurowanym serwerze www.rails.z
  * Dodanie wyszukiwarki
 ==Do zrobienia w ramach własnej nauki:
  * Nie używanie subdomeny dla projektów rails
- * Dodanie UTF-8 dla bazy danych tak aby przyjęła polskie znaki (gem mysql2)
  * Dodanie systemy rejestracji logowania i możliwości indywidualizacji list 'todo'
 
 ==Testing on:
