@@ -14,7 +14,7 @@ class TodosController < ApplicationController
     if params[:search].nil? || params[:search].empty? then
       @todos = Todo.paginate(:page => params[:page], :per_page => 12)
     else
-      @todos = Todo.paginate(:conditions => ["name LIKE ?", params[:search]], :page => params[:page], :per_page => 12)
+      @todos = Todo.paginate(:conditions => ["name LIKE ?", "%" + params[:search] + "%"], :page => params[:page], :per_page => 12)
     end
     render 'index'
   end
