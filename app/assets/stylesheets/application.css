@@ -156,7 +156,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e0e0e0', e
 }
 
 .show {
-  display: inline-block;
+  display: block;
   padding: 0 30px;
   margin: 0 auto;
   width: 10%;
